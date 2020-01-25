@@ -1,0 +1,59 @@
+{
+  "name": "firstclone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "lint": "eslint --init",
+    "lint:fix": "prettier-eslint \"$(pwd)/**/*.{js,json}\" --write",
+    "prettier": "prettier \"$(pwd)/**/*.{js,json}\" --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paparian/firstclone.git"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:fix",
+      "npm run prettier",
+      "git add ."
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paparian/firstclone/issues"
+  },
+  "homepage": "https://github.com/paparian/firstclone#readme",
+  "dependencies": {
+    "css-loader": "^3.4.2",
+    "dotenv": "^8.2.0",
+    "dotenv-webpack": "^1.7.0",
+    "file-loader": "^5.0.2",
+    "glob": "^7.1.6",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "purgecss-webpack-plugin": "^2.0.5",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "terser-webpack-plugin": "^2.3.2",
+    "webpack": "^4.41.5"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "html-webpack-plugin": "^3.2.0",
+    "lint-staged": "^10.0.2",
+    "prettier": "^1.19.1",
+    "prettier-eslint": "^9.0.1",
+    "prettier-eslint-cli": "^5.0.0",
+    "webpack-merge": "^4.2.2"
+  }
+}
